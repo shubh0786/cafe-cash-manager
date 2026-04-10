@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f0f7f7;
+    color: #133c3b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background: linear-gradient(135deg, #1a5b58, #2e8c86);
+    color: #fff;
+    font-weight: 700;
+    @apply px-5 py-3 rounded-2xl text-base tracking-wide
+           active:scale-[0.97] transition-all duration-150
+           disabled:opacity-30 disabled:cursor-not-allowed disabled:active:scale-100
+           flex items-center justify-center gap-2;
+    box-shadow: 0 4px 14px rgba(26, 91, 88, 0.3);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #174a48, #1f706c);
+    box-shadow: 0 6px 20px rgba(26, 91, 88, 0.4);
+  }
+
+  .btn-secondary {
+    background-color: #fff;
+    color: #1a5b58;
+    border: 1px solid #b4ddd9;
+    @apply px-4 py-2.5 rounded-xl font-medium
+           active:scale-[0.97] transition-all duration-150
+           disabled:opacity-30 disabled:cursor-not-allowed;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .btn-secondary:hover {
+    border-color: #2e8c86;
+    background-color: #f0f7f7;
+  }
+
+  .btn-ghost {
+    color: #4da8a1;
+    @apply px-3 py-2 rounded-xl transition-all duration-150 text-sm font-medium;
+  }
+  .btn-ghost:hover {
+    color: #1a5b58;
+    background-color: rgba(26, 91, 88, 0.06);
+  }
+
+  .glass-card {
+    background: #fff;
+    border: 1px solid #d9eeec;
+    border-radius: 1rem;
+    box-shadow: 0 1px 4px rgba(10, 37, 36, 0.05);
+  }
+
+  .input-clean {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #b4ddd9;
+    color: #133c3b;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    transition: all 0.2s;
+    outline: none;
+  }
+  .input-clean:focus {
+    border-bottom-color: #2e8c86;
+  }
+  .input-clean::placeholder {
+    color: #7ec4bf;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.4s ease-out both;
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out both;
+  }
+}
