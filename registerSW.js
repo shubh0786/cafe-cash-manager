@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/cafe-cash-manager/sw.js', { scope: '/cafe-cash-manager/' })})}

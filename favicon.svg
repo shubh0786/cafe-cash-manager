@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="16" fill="#3C2415"/>
+  <!-- Crown -->
+  <g transform="translate(50,28)" fill="#D4A574">
+    <polygon points="0,-14 -4,-6 -12,-8 -8,0 -14,6 -6,4 0,12 6,4 14,6 8,0 12,-8 4,-6"/>
+    <circle cx="0" cy="-14" r="2.5"/>
+    <circle cx="-12" cy="-8" r="2"/>
+    <circle cx="12" cy="-8" r="2"/>
+  </g>
+  <!-- M letter -->
+  <text x="50" y="68" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="#D4A574" text-anchor="middle">M</text>
+  <!-- Decorative line -->
+  <line x1="25" y1="76" x2="75" y2="76" stroke="#D4A574" stroke-width="1.5"/>
+</svg>
